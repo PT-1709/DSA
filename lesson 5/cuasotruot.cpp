@@ -11,22 +11,24 @@ int main() {
     for (int i = 0; i < n; i++){
         cin >> a[i];
     }
-
-    int tong = 0, max_sum = 0;
+    int first_sum = 0;
     for (int i = 0; i < k; i++){
-        tong += a[i];
+        first_sum += a[i];
     }
-
-
-    max_sum = tong;
-    for (int i = 1; i <= n-k; i++){
-        max_sum = max_sum - a[i -1] + a[i +k + 1];
-        if (max_sum > tong){
-            tong = max_sum;
+    int last_sum = first_sum;
+    int p = 0;
+    for (int i = 1; i <= n - k; i++ ){
+        last_sum = last_sum - a[i-1] + a[i + k - 1];
+        if (last_sum > first_sum){
+            first_sum = last_sum;
+            p = i;
         }
     }
-
-    cout <<  tong << endl;
+    cout << p << " " << first_sum << endl;
+    for (int i = 0; i <k; i++){
+        cout << a[p+i] << " ";
+    }
+    
     
     return 0;
 }
