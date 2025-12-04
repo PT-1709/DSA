@@ -22,18 +22,6 @@ int main() {
         else f[i] = f[i-1] + d[i];
     }
 
-    /*cout << endl;
-    for (int i = 1; i <= n ;i++){
-        cout << a[i] << " ";
-    }
-    cout << endl;
-    for (int i = 1; i <= n; i++){
-        cout << d[i] << " ";
-    }
-    cout << endl;
-    for (int i = 1; i <= n; i++){
-        cout << f[i] << " ";
-    }*/
     long long sum = 0;
     sort(a+1, a+n+1);
     sort(f+1, f+n+1);
