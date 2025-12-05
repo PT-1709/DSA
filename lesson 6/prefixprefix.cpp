@@ -54,19 +54,19 @@ int main() {
         else F[i] = F[i-1] + D[i];
     }
     
-    for (int i = 1; i <=n ; i++){
+    for (int i = 1; i <=n ; i++){  // tính mảng hiệu của mảng ban đầu
         if ( i == 1) d[i] = a[i];
         else d[i] = a[i] - a[i-1]; 
     }
 
-    for (int i = 1; i <= m; i++){
+    for (int i = 1; i <= m; i++){ // tính lại mảng cộng dồn sau khi có D mảng tần số của thao tác và F là số lần thao tác đó đc lặp lại
         if (F[i] != 0){
             d[b[i].l] += b[i].d * F[i];
             d[b[i]. r + 1] -= b[i].d * F[i];
         }
     }
     int tong = 0;
-    for (int i = 1; i <= n; i++){
+    for (int i = 1; i <= n; i++){ // tính lải mảng sau khi đc thêm các thao tác
         tong += d[i];
         cout << tong << " ";
     }

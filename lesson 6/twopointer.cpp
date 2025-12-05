@@ -15,31 +15,26 @@ int main() {
     for (int i = 0; i < m; i++){
         cin >> b[i];
     }
-    vector<int> c;
+
     int i = 0, j = 0, k = 0;
     while (i < n && j < m){
         if (a[i] < b[j]){
-            c.push_back(a[i]);
+            cout << a[i] << " ";
             i++;
         }
         else{
-            c.push_back(b[j]);
+            cout << b[j] << " ";
             j++;
         }
-        k++;
     }
     while (i < n){
-        c.push_back(a[i]);
+        cout << a[i] << " ";
         i++;
-        k++;
     }
     while (j < m){
-        c.push_back(b[j]);
+        cout << b[j] << " ";
         j++;
-        k++;
     }
-    for (int x : c){
-        cout << x << " ";
-    }
+    
     return 0;
 }
