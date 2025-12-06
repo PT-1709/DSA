@@ -26,7 +26,6 @@ int main() {
         else{
             cout << i << " ";
             j++;
-
         }
     }
     while (j < m){

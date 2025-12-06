@@ -19,59 +19,51 @@ sau đó chỉ cần tính 1 lần mảng hiệu nữa để tìm ra dãy số =
 
 */
 
-int a[100005]; // a lưu dãy số cho trc
-struct query{
-    int l,r,d;
-};
-int D[100005], F[100005];   // D là mảng hiệu của số thao tác đc gọi, F là mảng cộng dồn để tính ra tần suất của các thao tác
-query b[100005];
-int d[100005], f[100005]; // d là mảng hiệu của a
-
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    
+struct query{
+    int l,r,d;
+};
+
+query A[1000005];// mảng lưu tao tác
+int F[1000005]; // mảng cộng dồn lưu thao tác , mảng tần số 
+int a[1000005]; // mảng a cho trước
+int d[1000005];// mảng hiệu của a
+int D[1000005]; // mảng hiệu của A
+
+int main(){
     int n,m,k; cin >> n >> m >> k;
     for (int i = 1; i <= n; i++){
         cin >> a[i];
     }
+    for (int i = 1; i <= m; i++){
+        cin >> A[i].l >> A[i].r >> A[i].d;
+    }
+    while (k--){
+        int l,r; cin >> l >> r;
+        D[l] += 1;
+        D[r +1 ] -= 1;
+    }
 
     for (int i = 1; i <= m; i++){
-        cin >> b[i].l >> b[i].r >> b[i].d; // lưu l r d vào mảng  struct
-    }
-
-    while (k--){
-        int l,r; cin >> l >> r;// tính mảng hiệu
-        D[l] += 1;
-        D[r +1] -= 1; 
-    }
-
-    for (int i = 1; i <= m; i++){ // tính lại mảng cộng dồn
-        if (i == 1) F[i] = D[i];
+        if(i== 1) F[i] = D[i];
         else F[i] = F[i-1] + D[i];
     }
     
-    for (int i = 1; i <=n ; i++){  // tính mảng hiệu của mảng ban đầu
-        if ( i == 1) d[i] = a[i];
-        else d[i] = a[i] - a[i-1]; 
+    for (int i = 1; i <= n; i++){
+        if (i == 1) d[i] = a[i];
+        else d[i] = a[i] - a[i-1];
+    }
+    for (int i = 1; i <= m; i++){
+        d[A[i].l] += F[i] * A[i].d;
+        d[A[i].r + 1] -= F[i] * A[i].d;
     }
 
-    for (int i = 1; i <= m; i++){ // tính lại mảng cộng dồn sau khi có D mảng tần số của thao tác và F là số lần thao tác đó đc lặp lại
-        if (F[i] != 0){
-            d[b[i].l] += b[i].d * F[i];
-            d[b[i]. r + 1] -= b[i].d * F[i];
-        }
-    }
     int tong = 0;
-    for (int i = 1; i <= n; i++){ // tính lải mảng sau khi đc thêm các thao tác
+    for (int i = 1; i <= n; i++){
         tong += d[i];
         cout << tong << " ";
     }
-    
-    
     return 0;
 }
-// đến 42 : 44
