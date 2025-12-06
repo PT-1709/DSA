@@ -97,14 +97,14 @@ int main() {
         else i++;
     }
     cout << "-1" << endl;*/ 
-
-    for (int i = 0; i < n; i++){
+    // tìm kiếm nhị phân 
+    /*for (int i = 0; i < n; i++){
         if (check(a, k - a[i])){
             cout << "Yes\n";
             return 0;
         }
     }
-    cout << "No\n";
+    cout << "No\n";*/
 
     
     
