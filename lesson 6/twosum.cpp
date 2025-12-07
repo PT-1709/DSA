@@ -106,7 +106,9 @@ int main() {
     }
     cout << "No\n";*/
 
-    
+    for (int x : a){
+        cout << x << " ";
+    }
     
     return 0;
 }
