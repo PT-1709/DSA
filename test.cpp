@@ -1,21 +1,19 @@
-//Accessing Inherited Functions
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 
-class SUM{
-    private:
-        ll val = 1 ;
+const int TABLE_SIZE = 10;
 
-    public:
+class Hashtable{
+    private:
+        vector<list<pair<int,string>>> table;
         
 };
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
-    
+
     
     return 0;
 }

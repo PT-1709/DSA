@@ -84,8 +84,8 @@ int main() {
     }
 
     mergesort(a,0, n-1);
-    // 2 con trỏ
-    /*int i = 0, j = n- 1;
+    
+    int i = 0, j = n- 1;
     while (i < j){
         if (a[i] + a[j] == k){
             cout << i << " " << j << endl;
@@ -96,7 +96,7 @@ int main() {
         }
         else i++;
     }
-    cout << "-1" << endl;*/ 
+    cout << "-1" << endl;
     // tìm kiếm nhị phân 
     /*for (int i = 0; i < n; i++){
         if (check(a, k - a[i])){
@@ -106,9 +106,7 @@ int main() {
     }
     cout << "No\n";*/
 
-    for (int x : a){
-        cout << x << " ";
-    }
+    
     
     return 0;
 }
