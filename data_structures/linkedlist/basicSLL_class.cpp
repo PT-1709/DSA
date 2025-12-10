@@ -14,7 +14,7 @@ class Linkedlist{
         Node* head;
 
     public:
-        Linkedlist() : head{nullptr}{}
+        Linkedlist() : head{nullptr}{}// khai báo node head = nullptr
         void print(){   // ko đc dùng trực tiếp vì khi di chuyển nó sẽ di chuyển luôn và mất tất cả dữ liệu
             Node* tmp = head;
             while(tmp != nullptr){
@@ -88,7 +88,9 @@ class Linkedlist{
                 return;
             }
             else{
+                Node* p = head;
                 head = head->next;
+                delete p;
             }
         }
 
@@ -105,6 +107,7 @@ class Linkedlist{
                     sau = sau->next;
                 }
                 trc->next = nullptr;
+                delete sau;
             }
         }
 
@@ -128,8 +131,34 @@ class Linkedlist{
                     sau = sau->next;
                 }
                 trc->next = sau->next;
+                delete sau;
 
             }
+        }
+
+        void deleteVal(int x){
+            while (head != nullptr && head->data == x){
+                Node* tmp = head;
+                head = head->next;
+                delete tmp;
+            }
+            if (head == nullptr){
+                return;
+            }
+            Node* trc = nullptr;
+            Node* sau = head;
+            while (sau != nullptr){
+                if (sau->data == x){
+                    trc->next = sau->next;
+                    delete sau;
+                    sau = trc->next;
+                }
+                else{
+                    trc = sau;
+                    sau = sau->next;
+                }
+            }
+
         }
 };
 
@@ -141,16 +170,18 @@ int main() {
     Linkedlist link;
     int n; cin >> n;
     for (int i = 1; i <= n; i++){
-        link.insertLast(i);
+        int x; cin >> x;
+        link.insertLast(x);
     }
-    link.print(); cout << endl;
 
     int x; cin >> x;
-    link.deleteMiddle(x);
-    link.print();
+    link.deleteVal(x);
+    link.print(); cout << endl;
+    
 
      
     return 0;
 }
 
-// đối với class như trên, đang viết hàm trong class nên head thay đổi theo từng hàm vì vậy muốn thay đổi có thể dùng trực tiếp hoặc in - đếm thì thôgn qua tạm
+// đối với class như trên, đang viết hàm trong class nên head thay đổi theo từng hàm vì vậy muốn thay đổi có thể 
+// dùng trực tiếp hoặc in - đếm thì thông qua tạm

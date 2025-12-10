@@ -81,7 +81,9 @@ void deletefirst(node &a){
         return;
     }
     else{
+        node tmp = a;
         a = a->next;
+        delete tmp;
     }
 }
 
@@ -97,6 +99,7 @@ void deleteLast(node &a){
             sau = sau->next;
         }
         trc->next = nullptr;
+        delete sau;
     }
 }
 
@@ -123,6 +126,7 @@ void deleteMiddle(node &a, int k){
             sau = sau->next;
         }
         truoc->next = sau->next;
+        delete sau;
     }
     
 }
@@ -135,15 +139,46 @@ void in(node a){ // ở đây đc dùng trực tiếp a vì a ko làm thay đổ
     }
 }
 
+void deleteVal(node &a, int x){
+    node p = a;
+    while (p != nullptr && p->data == x){
+        node tmp = p;
+        p = p ->next;
+        delete tmp;
+    }
+    if (a == nullptr){
+        return;
+    }
+    node trc = nullptr, sau = a;
+    while (sau != nullptr){
+        if (sau->data == x){
+            trc->next = sau->next;
+            delete sau;
+            sau = trc->next;
+        }
+        else{
+            trc = sau;
+            sau = sau->next;
+        }
+    }
 
+}
 
 
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
-    
+    node a = nullptr;
+    int n; cin >> n;
+    for (int i = 0; i < n ; i++){
+        int x; cin >> x;
+        insertLast(a,x);
+    }
+
+    int x; cin >> x;
+    deleteVal(a,x);
+    in(a);
     
     return 0;
 }
