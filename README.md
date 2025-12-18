@@ -1,2 +1,3 @@
 # DSA with ツNöGïrlHërëツ
 learn Data Structure and Argorithm
+resolve the problem on LeetCode - Hackerrank, .....
