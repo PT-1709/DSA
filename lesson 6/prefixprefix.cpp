@@ -55,6 +55,7 @@ int main(){
         if (i == 1) d[i] = a[i];
         else d[i] = a[i] - a[i-1];
     }
+    
     for (int i = 1; i <= m; i++){
         d[A[i].l] += F[i] * A[i].d;
         d[A[i].r + 1] -= F[i] * A[i].d;
