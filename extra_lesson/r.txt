@@ -1,0 +1,4 @@
+trong file này sẽ học về nghịch đảo module để có thể sử lý đc bài toán đồng dư của phép chia
+có 2 cách
+- giải thuật Euclid mở rộng
+- định lý nhỏ Femat
