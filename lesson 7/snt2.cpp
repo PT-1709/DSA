@@ -16,7 +16,7 @@ void sang(){
     for (int i = 2; i <= N; i++){
         if (prime[i]){
             for (ll j = (ll)i * i ; j <= N; j+= i){
-                prime[j] = false;
+                prime[j] = false; 
             }
         }
     }
