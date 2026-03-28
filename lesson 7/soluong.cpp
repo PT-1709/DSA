@@ -1,4 +1,4 @@
-// đếm xem N! có bao nhiêu ước
+// đếm xem N! có bao nhiêu ước  rồi % 1e9 + 7
 // dùng legendre để đế xem bậc cao nhất của 1 số nguyên tố rồi dùng công thức (p1 +1) * ... * (pn + 1) để tính ra số ước
 
 #include <bits/stdc++.h>
