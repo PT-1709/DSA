@@ -15,8 +15,9 @@ int main() {
     
     ll n, p; cin >> n >> p;
     ll ans = 0;
-    for (ll i = 1; i <= n; i++){
-        ans += n / (pow(p,i));
+    while (n > 0){
+        ans += n/p;
+        n/=p;
     }
 
     cout << ans << endl;
