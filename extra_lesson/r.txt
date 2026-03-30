@@ -2,3 +2,12 @@ trong file này sẽ học về nghịch đảo module để có thể sử lý 
 có 2 cách
 - giải thuật Euclid mở rộng
 - định lý nhỏ Femat
+
+so sánh
+ - nếu so sánh thì euclid có cách triển khai dài hơn tuy nhiên, nó sẽ làm đc rất nhiều câu chuyện ví dụ như có thể tính cả mod của hợp số
+điều mà fermat nhỏ ko thể làm đc.
+ - điều kiện của fermat nhỏ là cố định: số p phải là số nguyên tố và a % b != 0
+
+nếu p là số nguyên tố, với số a bất kỳ ta có a^p - a sẽ chia hết cho p
+hoặc p là số nguyên tố với a là số KO chia hết cho p thì a^(p-1) - 1 thì chia hết cho p
+ 
