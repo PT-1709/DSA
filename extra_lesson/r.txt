@@ -10,4 +10,11 @@ so sánh
 
 nếu p là số nguyên tố, với số a bất kỳ ta có a^p - a sẽ chia hết cho p
 hoặc p là số nguyên tố với a là số KO chia hết cho p thì a^(p-1) - 1 thì chia hết cho p
+
+ở định lý nhỏ fermat, nếu là nghịch đảo module thì ta cần lấy m - 2 còn để hạ bậc số mũ quá to thì chỉ cần m - 1
+bài tập đồng dư: https://docs.google.com/document/d/1Fs4hQWffqAgOM9-tm-b6Bh9bamBdQoxfz-Ou5SYnVZc/edit?usp=sharing
+
+đồng dư trung hoa, để giải phương trình đồng dư
+
+với bài 7x = 5 (mod 11) thì vẫn đi tìm nghịch đảo của 7 mod 11 ra 8 rồi lấy 8 nhân với số dư mong muốn. ra đc bao nhiêu thì chia dư với mod là đc
  
