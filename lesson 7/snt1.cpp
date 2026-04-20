@@ -1,4 +1,4 @@
-// in ra thừa số nguyên tố của 2 -> N, dùng SPF (smallest prime factor) để sử dụng thay vì sài sàng nguyên tố bình thường
+// in ra thừa số nguyên tố của 2 -> N, dùng spf (smallest prime factor) để sử dụng thay vì sài sàng nguyên tố bình thường
 
 #include <bits/stdc++.h>
 using namespace std;

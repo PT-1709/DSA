@@ -2,6 +2,8 @@
 // mảng hiêu: a[i] - a[i - 1]
 // nếu cộng dồn mảng hiệu thì sẽ quay về mảng ban đầu
 // chỉ cần thay đổi D[L] và D[R +1] thì sau đó về mảng cộng dồn nó sẽ tự động thay đổi
+// cập nhật giá trị từ đoạn L -> R   nhiều lần liên tiếp 
+
 #include <bits/stdc++.h>
 using namespace std;
 

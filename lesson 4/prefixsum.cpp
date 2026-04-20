@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// mảng cộng dồn để tính tổng từ L đến R của 1 dãy số nào đó, chỉ cần lấy Sum[R] - Sum[L-1]
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);

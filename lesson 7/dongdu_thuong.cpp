@@ -1,4 +1,4 @@
-// bài này test code của đồng dư thương
+// bài này test code của đồng dư thương sử dụng euclid mở rộng
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
