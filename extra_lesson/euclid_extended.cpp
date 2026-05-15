@@ -1,6 +1,7 @@
 // nghịch đảo a của module m
 // khi dùng phép thương trong đồng dư thì có thể nhân với nghịch đảo của số đó với mod mà đề bài cho
 // idea nhìn vào ảnh
+// đối vs bài này, y ko quá quan trọng còn x là phần nghịch đảo cần tìm
 
 
 #include <bits/stdc++.h>
